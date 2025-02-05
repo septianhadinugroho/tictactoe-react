@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
@@ -15,11 +15,11 @@ body {
 }
 
 .square {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #4a90e2;
+  width: 78px;
+  height: 78px;
+  border: 3px solid #4a90e2;
   background-color: #1e3c72;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   color: white;
@@ -37,18 +37,18 @@ body {
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 180px;
-  height: 180px;
-  gap: 5px;
+  width: 280px;
+  height: 280px;
+  gap: 8px;
   background-color: #2a5298;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .status {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -56,43 +56,68 @@ body {
 
 .game {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 450px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
   flex-direction: row;
   width: 100%;
 }
 
 .game-info {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .game-info ol {
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .game-info li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .game-info button {
   background-color: #4a90e2;
   border: none;
   color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 10px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .game-info button:hover {
   background-color: #357abd;
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .status {
+    font-size: 1.2rem;
+  }
+
+  .game-info {
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .game-info button {
+    width: 100%;
+  }
 }
